@@ -19,7 +19,7 @@ const GROUP_MAPPINGS = {
 
 const CHANNEL_MAPPINGS = {
 	'313388169095806986': 'CW-#general', // #general
-	'320416260376494093': 'CW-#civclassic' // #civclassic
+	'320416260376494093': 'CW-#civclassic', // #civclassic
 	'325637706405117955': 'CW-1' // #cw-1
 }
 
