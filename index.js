@@ -13,12 +13,14 @@ const LOCAL_CHAT_CHANNELS = [
 
 const GROUP_MAPPINGS = {
 	'CW-#general': '313388169095806986', // #general
-	'CW-#civclassic': '320416260376494093' // #civclassic
+	'CW-#civclassic': '320416260376494093', // #civclassic
+	'CW-1': '325637706405117955', // #cw-1
 }
 
 const CHANNEL_MAPPINGS = {
 	'313388169095806986': 'CW-#general', // #general
 	'320416260376494093': 'CW-#civclassic' // #civclassic
+	'325637706405117955': 'CW-1' // #cw-1
 }
 
 const Discord = require('discord.js');
