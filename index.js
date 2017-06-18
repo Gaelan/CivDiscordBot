@@ -74,7 +74,7 @@ mcBot.on('message', function(message) {
 	}
 });
 
-mbBot.on('kick', function(message) {
+mcBot.on('kick', function(message) {
 	discordBot.channels.get(316235146774708226).send(`@Gaelan@0424 kicked for ${message}`).then(() => process.exit())
 })
 
