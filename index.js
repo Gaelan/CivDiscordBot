@@ -26,6 +26,8 @@ const CHANNEL_MAPPINGS = {
 const Discord = require('discord.js');
 const discordBot = new Discord.Client();
 
+process.on("unhandledRejection", function (err) { throw err; })
+
 discordBot.on('message', message => {
 	if (LOCAL_CHAT_CHANNELS.indexOf(message.channel.id) != -1) {
 		if(message.author.bot) {
@@ -75,7 +77,11 @@ mcBot.on('message', function(message) {
 });
 
 mcBot.on('kicked', function(message) {
-	discordBot.channels.get(316235146774708226).send(`@Gaelan@0424 kicked for ${message}`).then(() => process.exit())
+	console.log(message)
+})
+
+mcBot.on('end', function(message) {
+	discordBot.channels.get(316235146774708226).send(`@Gaelan@0424 disconnected`).then(() => process.exit())
 })
 
 function generateMsg(mcName, text) {
