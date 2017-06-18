@@ -83,7 +83,7 @@ mcBot.on('kicked', function(message) {
 mcBot.on('end', function(message) {
 	discordBot.channels.get('316235146774708226').send(`@Gaelan@0424 disconnected`).then(() => process.exit())
 })
-
+/*
 mcBot.on('playerJoined', function(player) {
 	discordBot.channels.get('316235146774708226').send(`${player.username} joined`)
 })
@@ -91,7 +91,7 @@ mcBot.on('playerJoined', function(player) {
 mcBot.on('playerLeft', function(player) {
 	discordBot.channels.get('316235146774708226').send(`${player.username} left`)
 })
-
+*/
 function generateMsg(mcName, text) {
 	return `**${mcName}:** ${text}`
 }
