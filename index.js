@@ -121,4 +121,4 @@ const MCchatQueue = {
 	}
 }
 
-setInterval(() => MCchatQueue.exec(), 500);
+setInterval(() => MCchatQueue.exec(), 1000);
