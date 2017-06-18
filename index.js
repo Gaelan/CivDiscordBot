@@ -23,6 +23,8 @@ const CHANNEL_MAPPINGS = {
 	'325637706405117955': 'CW-1' // #cw-1
 }
 
+let invitedPlayers = []
+
 const Discord = require('discord.js');
 const discordBot = new Discord.Client();
 
@@ -61,10 +63,10 @@ mcBot.on('message', function(message) {
 		}
 	} else if (match = groupRegex.exec(message.toString())) {
 		console.log(match);
-		if(match[1] == 'CW-1' && match[3] == '!groups') {
+		if(match[1] == 'CW-1' && (invitedPlayers.indexOf(match[2]) == -1)) {
 			MCchatQueue.add(null, `/nlip CW-#general ${match[2]}`)
 			MCchatQueue.add(null, `/nlip CW-#civclassic ${match[2]}`)
-			return;
+			invitedPlayers.push(match[2])
 		}
 		if (match[2] != mcBot.username){
 			const chanId = GROUP_MAPPINGS[match[1]]
