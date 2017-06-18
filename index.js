@@ -81,7 +81,7 @@ mcBot.on('kicked', function(message) {
 })
 
 mcBot.on('end', function(message) {
-	discordBot.channels.get('316235146774708226').send(`@Gaelan@0424 disconnected`).then(() => process.exit())
+	discordBot.channels.get('316235146774708226').send(`@Gaelan#0424 Bot disconnected`).then(() => process.exit())
 })
 /*
 mcBot.on('playerJoined', function(player) {
@@ -113,7 +113,7 @@ const MCchatQueue = {
 				console.log('set type to ' + msg.type)
 				this.state = msg.type
 			} else {
-				mcBot.chat(msg.message.substring(0,199))
+				mcBot.chat(msg.message.substring(0,99))
 				console.log('sent ', msg.message)
 				this.queue.shift();
 			}
