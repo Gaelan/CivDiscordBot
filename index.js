@@ -102,8 +102,10 @@ const MCchatQueue = {
 	queue: [],
 	state: null,
 	add(type, message) {
-		this.queue.push({type, message})
-		console.log(this.queue)
+		message.split("\n").forEach(line => {
+			this.queue.push({type, line})
+			console.log(this.queue)
+		})
 	},
 	exec() {
 		if (this.queue.length == 0) {
