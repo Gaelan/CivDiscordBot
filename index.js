@@ -75,7 +75,7 @@ mcBot.on('message', function(message) {
 				chan.send(generateMsg(match[2], match[3]))
 			}
 		}
-	} else if (message[0] == '*') {
+	} else if (message.toString()[0] == '*') {
 		discordBot.channels.get('326566410836901898').send(message.toString())
 	}
 });
